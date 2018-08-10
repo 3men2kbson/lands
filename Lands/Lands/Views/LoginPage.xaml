@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lands.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout
+            BackgroundColor="Orange"
+            Padding="10,20,10,5">
+            <Label 
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Lands"
+                TextColor="White"/>
+            <Image 
+                Source="landPlane"
+                WidthRequest="200">
+            </Image>
+            <Label 
+                FontAttributes="Bold"
+                Text="Email" 
+                TextColor="White"/> 
+            <Entry
+                Keyboard="Email"
+                Placeholder="Enter your Email...">
+            </Entry>
+            <Label 
+                FontAttributes="Bold"
+                Text="Password"
+                TextColor="White"/>
+            <Entry
+                IsPassword="True"
+                Placeholder="Enter your Password...">
+            </Entry>
+            <ActivityIndicator>
+            </ActivityIndicator>
+            <Button
+                BackgroundColor="Green"
+                BorderRadius="23"
+                Text="Login">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

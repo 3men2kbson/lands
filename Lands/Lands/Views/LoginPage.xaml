@@ -10,7 +10,7 @@
 
             <StackLayout
                 BackgroundColor="Orange"
-                Padding="10,20,10,5">
+                Padding="5">
                 <Label 
                     FontAttributes="Bold"
                     FontSize="Large"
@@ -22,7 +22,7 @@
                     WidthRequest="200">
                 </Image>
                 <Grid
-                     Margin="0,15">
+                    Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width=".5*"/>
                         <ColumnDefinition Width="2*"/>
@@ -63,10 +63,11 @@
                     VerticalOptions="CenterAndExpand">
                 </ActivityIndicator>
                 <StackLayout 
+                    Margin="10,0"
                     Orientation="Horizontal">
                     <Label 
                         HorizontalOptions="StartAndExpand"
-                        Text="Rememberme in this device"
+                        Text="Rememberme on this device"
                         VerticalOptions="Center"/>
                     <Switch
                         HorizontalOptions="End"
@@ -79,12 +80,14 @@
                     TextColor="Blue"
                     VerticalOptions="CenterAndExpand" />
                 <StackLayout
-                    Margin="45,0">
+                    Margin="45,0"
+                    Orientation="Horizontal"> 
                     <Button
                         BackgroundColor="Green"
                         BorderRadius="23"
                         Command="{Binding LoginCommand}"
                         HeightRequest="46"
+                        HorizontalOptions="FillAndExpand"
                         Text="Login"
                         TextColor="White">
                     </Button>
@@ -92,6 +95,7 @@
                         BackgroundColor="Navy"
                         BorderRadius="23"
                         HeightRequest="46"
+                        HorizontalOptions="FillAndExpand"
                         Text="Register"
                         TextColor="White">
                     </Button>

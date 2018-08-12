@@ -1,6 +1,7 @@
 ﻿namespace Lands.ViewModels
 {
     using GalaSoft.MvvmLight.Command;
+    using Lands.Views;
     using System;
     using System.ComponentModel;
     using System.Windows.Input;
@@ -100,11 +101,11 @@
             this.IsRunning = false;
             this.IsEnabled = true;
 
-            await Application.Current.MainPage.DisplayAlert(
-                    "Ok",
-                    "Fuck yeahh!!!",
-                    "Accept");
-            return;
+            this.Email = string.Empty;
+            this.Password = string.Empty;
+
+            MainViewModel.GetInstance().Lands = new LandsViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
 
         }
         #endregion

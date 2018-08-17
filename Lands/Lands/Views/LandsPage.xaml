@@ -9,6 +9,7 @@
             BindingContext="{Binding Lands}"
             Padding="5">
             <SearchBar
+                BackgroundColor="Silver"
                 Placeholder="Search..."
                 SearchCommand="{Binding SearchCommand}"
                 Text="{Binding Filter, Mode=TwoWay}">

@@ -111,13 +111,25 @@
                     VerticalOptions="EndAndExpand">
                     <Image
                         HeightRequest="70"
-                        Source="facebook_logo" />
+                        Source="facebook_logo">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LoginFacebookCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
                     <Image
                         HeightRequest="73"
-                        Source="twitter_logo"/>
+                        Source="twitter_logo">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LoginTwitterCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
                     <Image
                         HeightRequest="73"
-                        Source="instagram_logo"/>
+                        Source="instagram_logo">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LoginImstagramCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
 
                 </StackLayout>
             </StackLayout>

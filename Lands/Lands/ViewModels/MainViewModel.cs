@@ -7,6 +7,7 @@
     {
         #region Properties
         public List<Country> LandsList { get; set; }
+        public TokenResponse Token { get; set; }
         #endregion
 
         #region ViewModels

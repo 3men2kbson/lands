@@ -12,7 +12,7 @@
             <Label
                     FontAttributes="Bold"
                     FontSize="Large"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Center" 
                     Text="{Binding Land.Name}"
                     TextColor="DarkBlue">
             </Label>

@@ -21,7 +21,6 @@
         private ObservableCollection<LandItemViewModel> countries;
         private bool isRefreshing;
         private string filter;
-        private List<Country> countryList;
         #endregion
 
         #region Properties
@@ -92,7 +91,7 @@
                 return;
             }
 
-            this.countryList = (List<Country>)response.Result;
+            MainViewModel.GetInstance().LandsList = (List<Country>)response.Result;
             this.Countries = new ObservableCollection<LandItemViewModel>(
                 this.ToLandItemViewModel());
             this.IsRefreshing = false;
@@ -101,8 +100,7 @@
 
         private IEnumerable<LandItemViewModel> ToLandItemViewModel()
         {
-            //return MainViewModel.GetInstance().LandsList.Select(l => new LandItemViewModel
-            return this.countryList.Select(l => new LandItemViewModel
+            return MainViewModel.GetInstance().LandsList.Select(l => new LandItemViewModel
             {
                 Alpha2Code = l.Alpha2Code,
                 Alpha3Code = l.Alpha3Code,

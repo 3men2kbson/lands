@@ -1,15 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              x:Class="Lands.Views.LandsPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="Lands">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ffimageloadingsvg:SvgImageSourceConverter 
+                x:Key="SvgImageSourceConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout 
             BindingContext="{Binding Lands}"
             Padding="5">
             <SearchBar
                 BackgroundColor="Silver"
+                HeightRequest="46"
                 Placeholder="Search..."
                 SearchCommand="{Binding SearchCommand}"
                 Text="{Binding Filter, Mode=TwoWay}">
@@ -38,6 +48,12 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
+                                    <ffimageloading:CachedImage 
+                                        Grid.Column="0"
+                                        HeightRequest="30"
+                                        Source="{Binding Flag, Converter={StaticResource SvgImageSourceConverter}}"
+                                        WidthRequest="60">
+                                    </ffimageloading:CachedImage>
                                     <StackLayout 
                                         Grid.Column="1"
                                         VerticalOptions="Center">

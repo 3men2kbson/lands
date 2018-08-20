@@ -124,7 +124,7 @@
     <value>EMail</value>
   </data>
   <data name="EmailPlaceHolder" xml:space="preserve">
-    <value>Enter your Password...</value>
+    <value>Enter your Email...</value>
   </data>
   <data name="EmailValidation" xml:space="preserve">
     <value>You must enter an email.</value>

@@ -1,9 +1,5 @@
-﻿namespace Lands.Models
+﻿namespace Lands.Domain
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-
     public class Response
     {
         public bool IsSuccess { get; set; }
